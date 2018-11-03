@@ -26,6 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
 $(call inherit-product, vendor/oneplus/oneplus3/oneplus3-vendor.mk)
 
+# Vendor properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -478,6 +481,11 @@ $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package \
+    libstdc++.vendor
 
 # VR
 PRODUCT_PACKAGES += \
