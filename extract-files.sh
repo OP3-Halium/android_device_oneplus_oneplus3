@@ -72,3 +72,13 @@ sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-
 
 patchelf --set-soname "vulkan.msm8996.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/vulkan.msm8996.so
 patchelf --set-soname "vulkan.msm8996.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/vulkan.msm8996.so
+
+function fix_vendor () {
+    sed -i \
+        "s/\/system\/$1\//\/vendor\/$1\//g" \
+        "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/"$2"
+}
+
+fix_vendor etc vendor/lib/libmmcamera2_sensor_modules.so
+fix_vendor lib vendor/lib64/libremosaiclib.so
+fix_vendor lib vendor/lib/libopcamera_native_modules.so
