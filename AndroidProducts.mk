@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_oneplus3.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_oneplus3-user \
+    lineage_oneplus3-userdebug \
+    lineage_oneplus3-eng
