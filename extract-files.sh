@@ -73,6 +73,16 @@ sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-
 patchelf --set-soname "vulkan.msm8996.so" "$DEVICE_BLOB_ROOT"/vendor/lib/hw/vulkan.msm8996.so
 patchelf --set-soname "vulkan.msm8996.so" "$DEVICE_BLOB_ROOT"/vendor/lib64/hw/vulkan.msm8996.so
 
+# Using prebuilt patchelf 0.9 for hex edit from https://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/218832
+# libcameraservice.so is currently only necessary shared library and requires lots of other libraries under system/lib.
+# However it is not possible to make vendor libs loading system libs due to ld config limitation.
+# Maybe we need ld config patches for R+ GSIs by hand.
+patchelf --replace-needed libcamera_client.so android.hardware.camera.common@1.0-helper.so "$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.msm8996.so
+patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.msm8996.so
+patchelf --remove-needed libgui.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libFNVfbEngineHAL.so
+
 function fix_vendor () {
     sed -i \
         "s/\/system\/$1\//\/vendor\/$1\//g" \

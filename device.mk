@@ -215,6 +215,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
+    android.hardware.camera.common@1.0 \
+    android.hardware.camera.common@1.0-helper \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
@@ -523,8 +525,13 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package \
-    libstdc++.vendor
+    libstdc++.vendor \
+    vndk_package
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk-sp/libcutils.so \
+    $(LOCAL_PATH)/prebuilts/libprocessgroup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprocessgroup.so \
+    $(LOCAL_PATH)/prebuilts/libcameraservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcameraservice.so
 
 # VR
 PRODUCT_PACKAGES += \
