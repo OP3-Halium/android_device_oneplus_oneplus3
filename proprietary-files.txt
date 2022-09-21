@@ -426,8 +426,8 @@ etc/cne/wqeclient/profile6.xml
 etc/cne/wqeclient/profile7.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.jar
+-framework/cneapiclient.jar
+-framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -487,9 +487,9 @@ etc/dpm/dpm.conf
 etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
+-framework/com.qti.dpmframework.jar
+-framework/dpmapi.jar
+-framework/tcmclient.jar
 lib64/com.qualcomm.qti.dpm.api@1.0.so
 lib64/libdpmctmgr.so
 lib64/libdpmfdmgr.so
@@ -532,8 +532,8 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
 etc/permissions/privapp-permissions-com.qualcomm.location.xml
-framework/com.qti.location.sdk.jar
-framework/izat.xt.srv.jar
+-framework/com.qti.location.sdk.jar
+-framework/izat.xt.srv.jar
 lib64/liblocationservice_jni.so
 lib64/libxt_native.so
 lib64/vendor.qti.gnss@1.0.so
@@ -770,11 +770,11 @@ etc/permissions/lpa.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
-framework/embmslibrary.jar
-framework/qcnvitems.jar
-framework/qcrilhook.jar
-framework/QtiTelephonyServicelibrary.jar
-framework/uimlpalibrary.jar
+-framework/embmslibrary.jar
+-framework/qcnvitems.jar
+-framework/qcrilhook.jar
+-framework/QtiTelephonyServicelibrary.jar
+-framework/uimlpalibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
@@ -822,7 +822,7 @@ vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 
 # Radio - from LA.UM.7.5.r1-04000-8x96.0
-framework/qti-telephony-common.jar|9aa88e7f3166d86da217d688b003c2ecf2840acf
+-framework/qti-telephony-common.jar|9aa88e7f3166d86da217d688b003c2ecf2840acf
 
 # Radio - param
 lib64/vendor.oneplus.hardware.param@1.0.so:vendor/lib64/vendor.oneplus.hardware.param@1.0.so
@@ -962,42 +962,42 @@ etc/firmware/tp/fw_synaptics_touchkey.img:vendor/firmware/tp/fw_synaptics_touchk
 vendor/bin/cnss-daemon
 
 # WiFi Display
-bin/wfdservice
-etc/init/wfdservice.rc
-etc/wfdconfig.xml
-etc/wfdconfigsink.xml
+-bin/wfdservice
+-etc/init/wfdservice.rc
+-etc/wfdconfig.xml
+-etc/wfdconfigsink.xml
 -framework/WfdCommon.jar
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so
-lib/libmmrtpdecoder.so
-lib/libmmrtpencoder.so
-lib/libwfdavenhancements.so
-lib/libwfdclient.so
-lib/libwfdcodecv4l2.so
-lib/libwfdcommonutils.so
-lib/libwfdconfigutils.so
-lib/libwfdmminterface.so
-lib/libwfdmmsink.so
-lib/libwfdmmsrc.so
-lib/libwfdnative.so
-lib/libwfdrtsp.so
-lib/libwfdservice.so
-lib/libwfdsm.so
-lib/libwfduibcinterface.so
-lib/libwfduibcsinkinterface.so
-lib/libwfduibcsink.so
-lib/libwfduibcsrcinterface.so
-lib/libwfduibcsrc.so
-lib64/libwfdclient.so
-lib64/libwfdnative.so
+-lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+-lib/libmmrtpdecoder.so
+-lib/libmmrtpencoder.so
+-lib/libwfdavenhancements.so
+-lib/libwfdclient.so
+-lib/libwfdcodecv4l2.so
+-lib/libwfdcommonutils.so
+-lib/libwfdconfigutils.so
+-lib/libwfdmminterface.so
+-lib/libwfdmmsink.so
+-lib/libwfdmmsrc.so
+-lib/libwfdnative.so
+-lib/libwfdrtsp.so
+-lib/libwfdservice.so
+-lib/libwfdsm.so
+-lib/libwfduibcinterface.so
+-lib/libwfduibcsinkinterface.so
+-lib/libwfduibcsink.so
+-lib/libwfduibcsrcinterface.so
+-lib/libwfduibcsrc.so
+-lib64/libwfdclient.so
+-lib64/libwfdnative.so
 -priv-app/WfdService/WfdService.apk
-vendor/bin/wifidisplayhalservice
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
-vendor/lib/libwfdcommonutils_proprietary.so
-vendor/lib/libwfdhaldsmanager.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdmmservice.so
-vendor/lib/libwfdmodulehdcpsession.so
+-vendor/bin/wifidisplayhalservice
+-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+-vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
+-vendor/lib/libwfdcommonutils_proprietary.so
+-vendor/lib/libwfdhaldsmanager.so
+-vendor/lib/libwfdhdcpcp.so
+-vendor/lib/libwfdmmservice.so
+-vendor/lib/libwfdmodulehdcpsession.so
 
 # VNDK
 vendor/lib/vndk/libbinder.so|134258560d0b48f11019c06d01b2a6e1c3b1d8f1
