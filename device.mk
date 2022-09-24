@@ -526,5 +526,10 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
 
+# Files for Ubuntu Touch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/70-oneplus3.rules:$(TARGET_COPY_OUT_SYSTEM)/halium/lib/udev/rules.d/70-android.rules \
+    $(LOCAL_PATH)/ubuntu/halium.yaml:$(TARGET_COPY_OUT_SYSTEM)/halium/etc/deviceinfo/devices/halium.yaml
+
 # Inherit from oppo-common
 #$(call inherit-product, device/oppo/common/common.mk)
