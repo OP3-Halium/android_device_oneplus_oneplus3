@@ -525,6 +525,12 @@ PRODUCT_COPY_FILES += \
 
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
+#
+
+#Misc
+PRODUCT_PACKAGES += \
+	libandroid \
+	libandroid_runtime
 
 # Files for Ubuntu Touch
 PRODUCT_COPY_FILES += \
