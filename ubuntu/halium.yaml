@@ -1,0 +1,19 @@
+default:
+  Vendor: OnePlus
+  PrettyName: OnePlus 3
+  DeviceType: phone
+  GridUnit: 20
+  SupportedOrientations:
+    - Portrait
+    - InvertedPortrait
+    - Landscape
+    - InvertedLandscape
+  BacklightSysfsPath: /sys/class/leds/lcd-backlight
+  DoubleTapToWake:
+    - /proc/touchpanel/double_tap_enable|1|0
+  MirAndroidPlatformClientEglFlush:
+    - "!/usr/bin/unity8,!/usr/bin/lomiri,all"
+  MirAndroidPlatformServerEglSync:
+    - false
+  MirAndroidPlatformServerPartialUpdates:
+    - true
